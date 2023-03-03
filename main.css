@@ -1,0 +1,220 @@
+:root {
+    --green: #00594f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.green {
+    color: var(--green);
+}
+
+html {
+    background-color: lightslategray;
+}
+
+body {
+    max-width: 55rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    position: relative;
+}
+
+header {
+    display: grid;
+    grid-template:
+        "a b c" / .75fr 1fr .25fr;
+    background-color: var(--green);
+    text-align: center;
+    height: 13rem;
+}
+
+#header-main {
+    grid-area: b;
+    margin-top: 3rem;
+    color: white;
+    text-align: left;
+}
+
+#header-main h1 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+#header-main h2 {
+    font-size: 20px;
+}
+
+#autum {
+    display: grid;
+    grid-area: c;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    background-color: #ed8b00;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem 0 0 1rem;
+    color: white;
+}
+
+#personal-info {
+    display: grid;
+    grid-template:
+        "a b" /.5fr 1fr;
+    max-height: 100%;
+    margin: 2rem;
+    margin-top: 4rem;
+    
+
+}
+
+
+#about_me {
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#about_me section {
+    margin-bottom: 2.5rem;
+}
+
+#about_me li {
+    margin-left: 2rem;
+}
+
+#about_me img {
+    margin-right: 1rem;
+
+}
+
+#about_me div {
+    margin-top: .5rem;
+}
+
+#email img,
+#email span,
+#linkedIn img,
+#linkedIn span,
+#phone img,
+#phone span
+{
+    vertical-align: middle;
+}
+
+#email,
+#linkedIn,
+#phone {
+    position: relative;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#workResume {
+    grid-area: b;
+    display: grid;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+
+}
+#contact_info{
+    position: relative;
+}
+#contact_info img {
+    max-width: 1.5rem;
+   
+}
+
+#th-logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#person-pictuer img {
+    display: grid;
+    max-width: 10rem;
+    position: relative;
+    margin-top: 3rem;
+    justify-content: left;
+    margin-left: 5rem;
+    border-radius: 100%;
+}
+
+#workResume section {
+    margin-bottom: 2rem;
+}
+
+#workResume h1 {
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+
+#workResume p {
+
+    margin-top: 1rem;
+}
+
+#workResume li {
+
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+blockquote {
+    margin-left: 3rem;
+
+}
+
+.copy {
+    display: none;
+    position: absolute;
+    top: -40px;
+    transform: translate(-50%);
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    background-color: grey;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.copy-pic:hover + .copy{
+    display: block;
+}
+
+#contact_info img:hover {
+    transform: scale(1.5);
+  }
+
+
+  @media (max-width: 700px){
+    #personal-info {
+        display: grid;
+        grid-template:
+            "a "
+            "b" 
+    }
+    #contact_info,#Skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #contact_info{
+        position: relative;
+    }
+
+}
